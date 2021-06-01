@@ -6,7 +6,6 @@ import { DownOutlined } from "@ant-design/icons"
 import styled from "styled-components"
 import Logotype from "../images/Logotype.svg"
 import Collapse from "../images/collapse.png"
-/*import Calculate from "../images/Calculate.svg"*/
 import Light from "../images/1.png"
 import Climate from "../images/2.png"
 import Curtains from "../images/3.png"
@@ -20,7 +19,7 @@ import {
   ClimateText,
   CurtainsImg, CurtainsText, ElectricityImg, ElectricityText, GatesImg, GatesText,
   LightImg,
-  LightText, Logo, MultimediaImg, MultimediaText, OpenedCollapse, SecurityImg, SecurityText,
+  LightText, Logo, MultimediaImg, MultimediaText, SecurityImg, SecurityText,
   Square,
   String, Typography, WiFiImg, WiFiText
 } from "./constants/constants"
@@ -32,12 +31,6 @@ const OwnHeader = styled(Header)`
   padding: 0;
   line-height: 96px;
   background-color: #0B0A0A;
-`
-
-const Calc = styled.div`
-  color: white;
-  margin: 0 9% 0 0;
-  float: right;
 `
 
 let Header2 = () => {
@@ -123,7 +116,7 @@ let Header2 = () => {
     </Typography>
   )
 
-  const forBussines = (
+  const forBusiness = (
     <Typography style={{
       width: "660px", height: "228px", backgroundColor: "#1C1A1A", display: "flex",
       flexDirection: "row", color: "#FFFFFF", lineHeight: "16.8px"
@@ -163,57 +156,16 @@ let Header2 = () => {
       </div>
     </Typography>
   )
-
-  const collapseCleverHome = (
-    <div>
-      qwdqw
-    </div>
-  )
-
-  const collapseForBussines = (
-    <div>
-      qwdqw
-    </div>
-  )
-
-  const collapseCompany = (
-    <div>
-      qwdqw
-    </div>
-  )
-
-  const collapsedDropdown = (
-    <OpenedCollapse>
-      <Dropdown overlay={collapseCleverHome}>
-        умный дом
-      </Dropdown>
-      <div>
-        проекты
-      </div>
-      <div>
-        шоурум
-      </div>
-      <Dropdown overlay={collapseForBussines}>
-        для бизнеса
-      </Dropdown>
-      <div>
-        новости
-      </div>
-      <Dropdown overlay={collapseCompany}>
-        компания
-      </Dropdown>
-    </OpenedCollapse>
-  )
+  
   {
     return (
       <OwnHeader className="header">
         <Logo> <img src={Logotype} alt="Logo" /> </Logo>
-        <Dropdown trigger="click" placement="bottomCenter" className="CollapsedDropdown" overlay={forBussines}>
+        <Dropdown trigger="click" placement="bottomCenter" className="CollapsedDropdown" overlay={forBusiness}>
           <div>
             <img src={Collapse} alt="Collapse" />
           </div>
         </Dropdown>
-        {/*<Calc> РАССЧИТАТЬ СТОИМОСТЬ <img style={{paddingLeft:"14px"}} src={Calculate} alt="Calculate"/> </Calc>*/}
         <Menu className="Menu" overflowedIndicator={<img src={Collapse} alt="Collapse" />} triggerSubMenuAction="hover"
               style={{ backgroundColor: "#0B0A0A", color: "white", overflow: "hidden" }} mode="horizontal">
           <Menu.Item key="cleverHome">
@@ -229,8 +181,8 @@ let Header2 = () => {
           <Menu.Item style={{ textTransform: "uppercase", fontFamily: "Exo 2" }} key="showroom">
             шоурум
           </Menu.Item>
-          <Menu.Item key="forBussines">
-            <Dropdown placement="bottomCenter" arrow="true" overlay={forBussines}>
+          <Menu.Item key="forBusiness">
+            <Dropdown placement="bottomCenter" arrow="true" overlay={forBusiness}>
               <div style={{ textTransform: "uppercase", fontFamily: "Exo 2" }}>
                 для бизнеса <DownOutlined />
               </div>
