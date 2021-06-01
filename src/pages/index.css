@@ -1,0 +1,47 @@
+@import '~antd/dist/antd.css';
+
+html{
+    background-color: #0D0C0C;
+}
+
+.CollapsedDropdown{
+    display: none;
+}
+
+@media screen and (max-width: 585px) {
+
+    .Menu{
+        display: none;
+    }
+
+    .CollapsedDropdown{
+        display: inline-block;
+        float: right;
+        color: white;
+        margin-right: 10.67px;
+    }
+}
+
+.ant-carousel{
+    width: 100%;
+    height: 100%;
+}
+
+.slick-track{
+    width: 100%;
+    height: 100%;
+}
+
+.slick-slider{
+/*    width: 615px !important;*/
+    height: 100%;
+}
+
+.slick-list{
+    height: 87%;
+}
+
+#___gatsby{
+    background-color: #0D0C0C;
+}
+
